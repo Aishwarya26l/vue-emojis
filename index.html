@@ -12,6 +12,9 @@
         <span v-if="problem === currentProblem">
           <b>{{problem}}</b>
         </span>
+       <span v-else-if="givens[problem]===solutions[problem]">
+          <button style="background-color:green" @click="currentProblem=problem">{{problem}}</button>
+       </span>
         <span v-else> 
           <button @click="currentProblem=problem">{{problem}}</button>
         </span>

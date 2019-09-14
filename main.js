@@ -7,11 +7,11 @@ var app = new Vue({
     directions: {
       "1":
         "Use the Face With Tears of Joy 😂 emoji in place of the word crying.",
-      "2": ""
+      "2": "2"
     },
     givens: {
       "1": "I am crying laughing.",
-      "2": ""
+      "2": "2"
     },
     solutions: {
       "1": "I am 😂 laughing.",
