@@ -9,7 +9,11 @@
     <div id="app">
       <h3>{{title}}</h3>
       <span v-for="problem in problems">
-        {{problem}}
+      <span v-if="problem === currentProblem">
+        <b>{{problem}}</b>
+      </span>
+      <span v-else>
+         {{problem}}
       </span>
     </div>
     <script src="https://unpkg.com/vue"></script>
