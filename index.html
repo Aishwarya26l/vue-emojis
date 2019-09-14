@@ -15,13 +15,16 @@
         <span v-else> 
           <button @click="currentProblem=problem">{{problem}}</button>
         </span>
+
       </span>
      <br />
-    <h3>Directions:</h3>
-    {{directions[currentProblem]}} <br/>
-    
-    <input v-model="givens[currentProblem]"> <br/>
-    <button>Submit</button>
+     <h3>Directions:</h3>
+     {{directions[currentProblem]}} <br/>
+
+     <input v-model="givens[currentProblem]"> <br/>
+     <span style="color:green" v-if="givens[currentProblem]===solutions[currentProblem]">
+      Correct!
+     </span>
     </div>
     <script src="https://unpkg.com/vue"></script>
     <script src="./main.js"></script>
