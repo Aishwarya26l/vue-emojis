@@ -2,20 +2,23 @@ var app = new Vue({
   el: "#app",
   data: {
     title: "Learn Emojis",
-    problems: [1, 2, 3, 4, 5],
+    problems: [1, 2, 3],
     currentProblem: 1,
     directions: {
       "1":
         "Use the Face With Tears of Joy 😂 emoji in place of the word crying.",
-      "2": "2"
+      "2": "Replace the word sad with the Loudly Crying Face 😭 emoji.",
+      "3": "Use the 😍 emoji in place of the word love."
     },
     givens: {
       "1": "I am crying laughing.",
-      "2": "2"
+      "2": "I am so sad.",
+      "3": "I love cookies."
     },
     solutions: {
       "1": "I am 😂 laughing.",
-      "2": ""
+      "2": "I am so 😭.",
+      "3": "I 😍 cookies."
     }
   },
   methods: {}
