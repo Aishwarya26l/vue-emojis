@@ -15,7 +15,10 @@
         <span v-else> 
           <button @click="currentProblem=problem">{{problem}}</button>
         </span>
-      <span>
+      </span>
+     <br />
+    <h3>Directions:</h3>
+    {{directions[currentProblem]}} 
     </div>
     <script src="https://unpkg.com/vue"></script>
     <script src="./main.js"></script>
