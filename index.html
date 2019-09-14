@@ -18,7 +18,10 @@
       </span>
      <br />
     <h3>Directions:</h3>
-    {{directions[currentProblem]}} 
+    {{directions[currentProblem]}} <br/>
+    
+    <input v-model="givens[currentProblem]"> <br/>
+    <button>Submit</button>
     </div>
     <script src="https://unpkg.com/vue"></script>
     <script src="./main.js"></script>
