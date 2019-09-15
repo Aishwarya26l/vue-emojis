@@ -24,5 +24,9 @@ var app = new Vue({
       "4": "🙏"
     }
   },
-  methods: {}
+  methods: {
+    isComplete: function(problem) {
+      return this.givens[problem] === this.solutions[problem];
+    }
+  }
 });
