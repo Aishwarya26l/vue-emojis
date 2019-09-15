@@ -2,36 +2,35 @@
 <html>
   <head>
     <title>Learn Emojis</title>
-    <meta charset="UTF-8" />
   </head>
-
   <body>
     <div id="app">
-      <h3>{{title}}</h3>
+      <h3>Learn Emojis</h3>
       <span v-for="problem in problems">
-        <span v-if="problem === currentProblem">
-          <b>{{problem}}</b>
+        <span v-if="problem===currentProblem">
+           <b> {{problem}} </b>
         </span>
-       <span v-else-if="isComplete(problem)">
-          <button style="background-color:green" 
-                  @click="currentProblem=problem">
-                  {{problem}}
+        <span v-else-if="isComplete(problem)">
+          <button @click="currentProblem=problem"
+                  style="background-color:green">
+            {{problem}}
+          </button>
+        </span>
+       <span v-else>
+          <button @click="currentProblem=problem">
+            {{problem}}
           </button>
        </span>
-        <span v-else> 
-          <button @click="currentProblem=problem">{{problem}}</button>
-        </span>
-
       </span>
-     <br />
-     <h3>Directions:</h3>
-     {{directions[currentProblem]}} <br/>
-
-     <input v-model="givens[currentProblem]"> <br/>
-     <span style="color:green" 
-            v-if="isComplete(currentProblem)">
-            Correct!
-     </span>
+      <br />
+      <h4>Directions:</h4>
+        {{directions[currentProblem]}} 
+      <br/>
+      <input v-model="givens[currentProblem]"> <br/>
+      <span v-if="isComplete(currentProblem)"
+            style="color:green">
+        Correct!
+      </span>
     </div>
     <script src="https://unpkg.com/vue"></script>
     <script src="./main.js"></script>
