@@ -1,13 +1,9 @@
 import json
 """
   This function assumes that index.html will try to load main.js
-  from /default/[REPLACE_WITH_LAMBDA_FUNCTION_NAME]/main.js. 
+  from /default/main.js. 
   You can modify your index.html script tag to be: 
-  <script src="/default/[REPLACE_WITH_LAMBDA_FUNCTION_NAME]/main.js"></script>
-  
-  Example - 
-    Lambda function name - vueEmoji
-    <script src="/default/vueEmoji/main.js"></script>
+  <script src="/default/main.js"></script>
 """
 def lambda_handler(event, context):
         
@@ -20,15 +16,15 @@ def lambda_handler(event, context):
         },
         "body": resultPage
     }
-    if path == "/vueEmojiTest/main.js":
+    if path == "/main.js":
         with open('main.js', 'r') as f:
             resultPage = f.read() 
         result["headers"]["Content-Type"] = "text/javascript;charset=UTF-8"
-    elif path == "/vueEmojiTest/package.json":
+    elif path == "/package.json":
         with open('package.json', 'r') as f:
             resultPage = f.read()
         result["headers"]["Content-Type"] = "application/json"
-    elif path == "/vueEmojiTest/index.html":
+    elif path == "/index.html":
         with open('index.html', 'r') as f:
             resultPage = f.read()
     else:
